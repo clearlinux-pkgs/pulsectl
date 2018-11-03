@@ -4,12 +4,13 @@
 #
 Name     : pulsectl
 Version  : 18.10.6
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/6e/dd/4e9e91bfeb6e0324bb6ba36ef42f1f08a9ccb6e31cc56bf143763bed8483/pulsectl-18.10.6.tar.gz
 Source0  : https://files.pythonhosted.org/packages/6e/dd/4e9e91bfeb6e0324bb6ba36ef42f1f08a9ccb6e31cc56bf143763bed8483/pulsectl-18.10.6.tar.gz
 Summary  : Python high-level interface and ctypes-based bindings for PulseAudio (libpulse)
 Group    : Development/Tools
 License  : MIT
+Requires: pulsectl-license = %{version}-%{release}
 Requires: pulsectl-python = %{version}-%{release}
 Requires: pulsectl-python3 = %{version}-%{release}
 Requires: setuptools
@@ -25,6 +26,14 @@ BuildRequires : setuptools
         play, player-like client).
         
         Originally forked from pulsemixer_ project, which had this code bundled.
+
+%package license
+Summary: license components for the pulsectl package.
+Group: Default
+
+%description license
+license components for the pulsectl package.
+
 
 %package python
 Summary: python components for the pulsectl package.
@@ -52,11 +61,13 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1541254413
+export SOURCE_DATE_EPOCH=1541255350
 python3 setup.py build
 
 %install
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/pulsectl
+cp COPYING %{buildroot}/usr/share/package-licenses/pulsectl/COPYING
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
@@ -64,6 +75,10 @@ echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
+
+%files license
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/pulsectl/COPYING
 
 %files python
 %defattr(-,root,root,-)
