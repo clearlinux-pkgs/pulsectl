@@ -1,5 +1,5 @@
 PKG_NAME := pulsectl
-URL = https://files.pythonhosted.org/packages/06/70/ec145718b1e7d0294ae568e0ad8d0a7495311ab4f69b244c1c55c10aa864/pulsectl-20.2.2.tar.gz
+URL = https://files.pythonhosted.org/packages/3e/fe/0ac0030e78712360a6c397dcac7fd9ee774caa2f7e46ae23f0a94046420a/pulsectl-20.2.4.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
