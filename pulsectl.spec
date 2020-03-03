@@ -4,7 +4,7 @@
 #
 Name     : pulsectl
 Version  : 20.2.4
-Release  : 17
+Release  : 18
 URL      : https://files.pythonhosted.org/packages/3e/fe/0ac0030e78712360a6c397dcac7fd9ee774caa2f7e46ae23f0a94046420a/pulsectl-20.2.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3e/fe/0ac0030e78712360a6c397dcac7fd9ee774caa2f7e46ae23f0a94046420a/pulsectl-20.2.4.tar.gz
 Summary  : Python high-level interface and ctypes-based bindings for PulseAudio (libpulse)
@@ -61,7 +61,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582910834
+export SOURCE_DATE_EPOCH=1583204049
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
