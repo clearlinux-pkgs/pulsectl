@@ -4,7 +4,7 @@
 #
 Name     : pulsectl
 Version  : 20.5.1
-Release  : 22
+Release  : 23
 URL      : https://files.pythonhosted.org/packages/ce/dc/10d768a530f24c7fcd007c59a02baba5b376bfd41c206fc3dbd3b53dd879/pulsectl-20.5.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ce/dc/10d768a530f24c7fcd007c59a02baba5b376bfd41c206fc3dbd3b53dd879/pulsectl-20.5.1.tar.gz
 Summary  : Python high-level interface and ctypes-based bindings for PulseAudio (libpulse)
